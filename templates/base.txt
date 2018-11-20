@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+
+{% load bootstrap %}
+
+{%block title%} Seja bem vindo {%endblock%}
+
+
+{%block main%}
+
+{%endblock%}
+
+
+{%block footer%}
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Place sticky footer content here.</span>
+      </div>
+    </footer>
+
+{%endblock%}

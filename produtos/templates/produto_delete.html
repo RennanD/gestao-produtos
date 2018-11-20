@@ -1,0 +1,64 @@
+{%extends 'base.html'%}
+
+{% load bootstrap %}
+
+{%block title%} Produtos | Delete {%endblock%}
+
+
+{%block main%}
+
+
+	<div class="row">
+	
+	  <div class="col-md">
+	  	
+	  </div>
+	
+	  <div class="col-md">
+
+		<div class="alert alert-danger">
+
+  			<strong>Atenção!</strong> O registro será deletado; <p class="alert-link">Deseja continuar?</>
+		
+		</div>
+
+		<form method="POST" enctype="multipart/form-data">
+
+			{% csrf_token %}
+
+			<button type="submit" class="btn btn-danger">Delete</button>
+			<a href="{% url 'lista-produto' %}" class="btn btn-info">Voltar </a>
+
+		</form>  	
+	  
+	  </div>
+
+	  <div class="col-md">
+	  	
+	  </div>
+	
+	</div>
+
+
+
+{%endblock%}
+
+
+{%block footer%}
+
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+            <div class="col-md"></div>
+
+            <div class="col-md">
+                <span class="text-muted">Sistema em Django 2.x</span>
+            </div>
+            
+            <div class="col-md"></div>
+          </div>
+        
+      </div>
+    </footer>
+
+{%endblock%}

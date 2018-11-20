@@ -1,0 +1,58 @@
+{%extends 'base.html'%}
+
+
+{%block title%} Produtos | Listagem {%endblock%}
+
+
+{%block main%}
+
+<div class="row">
+  <div class="col-lg">
+  	
+	<ul class="list-group">
+		{% for produtos in produto %}
+		<li class="list-group-item">
+			<a href="{% url 'update'  produtos.id %}" >{{produtos.nome}}</a> 
+			<div class="alinhar"><a href="{% url 'delete'  produtos.id %}" class="btn btn-danger">apagar</a></div></br>
+			<p>{{produtos.valor}} R$</p></br>
+			<p>{{produtos.descricao}}</p></br>	
+		</li>
+
+		{% endfor %}
+
+	</ul>
+
+  </div>
+  <div class="col-lg">
+  	
+  	<a href="{% url 'novo-produto' %}" class="btn btn-primary">Novo Produto</a>
+  	<a href="{% url 'dash' %}" class="btn btn-info">Home</a>
+  	<a href="{% url 'logout' %}" class="btn btn-dark">Sair</a>
+
+  </div>
+</div>
+
+
+	
+
+{%endblock%}
+
+
+{%block footer%}
+
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+            <div class="col-md"></div>
+
+            <div class="col-md">
+                <span class="text-muted">Sistema em Django 2.x</span>
+            </div>
+            
+            <div class="col-md"></div>
+          </div>
+        
+      </div>
+    </footer>
+
+{%endblock%}
