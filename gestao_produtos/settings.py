@@ -126,11 +126,18 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIRS = [
-    'statics',
-]
+# load media files
+MEDIA_URL = '/media/'
 
+
+MEDIA_ROOT = 'media'
+
+#login app
 
 LOGIN_URL = '/login/'
 
 LOGIN_REDIRECT_URL = 'dash'
+
+STATICFILES_DIRS = [
+    'statics',
+]
