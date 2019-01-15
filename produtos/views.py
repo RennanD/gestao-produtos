@@ -15,6 +15,7 @@ def novo_produto(request):
 	form = ProdutoForm(request.POST or None, request.FILES or None)
 
 	if  form.is_valid():
+		
 		form.save()
 		return redirect('lista-produto')
 
@@ -35,6 +36,7 @@ def update(request,id):
 		return redirect('lista-produto')
 
 	return render(request,'novo_produto.html',{'form': form})
+	
 
 @login_required
 

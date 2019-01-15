@@ -136,7 +136,7 @@ MEDIA_ROOT = 'media'
 
 LOGIN_URL = '/login/'
 
-LOGIN_REDIRECT_URL = 'dash'
+LOGIN_REDIRECT_URL = 'lista-produto'
 
 STATICFILES_DIRS = [
     'statics',

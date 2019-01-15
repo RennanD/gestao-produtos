@@ -27,6 +27,6 @@ urlpatterns = [
     path('', dash, name = "dash"),
     path('produtos/', include(produtos_urls)),
     path('logout',logout_view, name = "logout"),
-
+ 
 
 ]

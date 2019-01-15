@@ -13,7 +13,9 @@
 		{% for produtos in produto %}
 		<li class="list-group-item">
 			<a href="{% url 'update'  produtos.id %}" >{{produtos.nome}}</a> 
-			<div class="alinhar"><a href="{% url 'delete'  produtos.id %}" class="btn btn-danger">apagar</a></div></br>
+			<div class="alinhar">
+        <a href="{% url 'delete'  produtos.id %}" class="btn btn-danger">apagar</a>
+      </div></br>
 			<p>{{produtos.valor}} R$</p></br>
 			<p>{{produtos.descricao}}</p></br>	
 		</li>
